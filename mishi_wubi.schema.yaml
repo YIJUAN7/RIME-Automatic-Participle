@@ -1,0 +1,68 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: mishi_wubi
+  name: "米十五笔"
+  version: "1.0"
+  author:
+    - 创始人 李明先生
+  description: |
+    米十五笔-自动切分方案
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 西文 ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - lua_processor@*auto_commit
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+    # - lua_segmentor@batch_segmentor
+  translators:
+    - table_translator@mishi_table
+    - lua_translator@*my_translate
+    # - echo_translator
+    # - punct_translator
+    # - lua_translator@get_date
+
+translator:
+  dictionary: mishi_wubi
+  enable_sentence: false
+  enable_sentence_completion: false
+  enable_completion: false
+  encode_commit_history: false
+  enable_encoder: false
+  initial_quality: 0
+
+mishi_table:
+  dictionary: mishi_wubi
+  enable_user_dict: false
+  enable_sentence: false
+
+editor:
+  bindings:
+    space: confirm
+    Return: commit_composition
+speller:
+  alphabet: "abcdefghijklmnopqrstuvwxyz"
+  delimiter: " ;'"
+  auto_select: true
+  max_code_length: 20
+
+menu:
+  page_size: 5
