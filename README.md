@@ -40,7 +40,8 @@ Rime/
 ## 安装使用
 
 1. 将 `lua/` 目录和配置文件复制到 Rime 用户目录
-2. 在 schema 配置中启用脚本：
+2. 在 schema 配置中启用脚本，顺序可参考项目中的schema.yaml
+3. 可能会与其它配置冲突，已知项有：spller的maxcode即原有的四码上屏功能，和自动调频功能，因为我的翻译器只按照原始码表给出首选项，自动顶出的字可以与词频调整后的首选项不同,设置enable_user_dict: false。
 
 ```yaml
 engine:
