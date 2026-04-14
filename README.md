@@ -45,10 +45,10 @@ Rime/
 ```yaml
 engine:
   processors:
-    - lua_processor@auto_commit
+    - lua_processor@*auto_commit
     # ...其他 processors
   translators:
-    - lua_translator@my_translate
+    - lua_translator@*my_translate
     # ...其他 translators
 ```
 
