@@ -1,0 +1,7 @@
+# Rime build output
+build/
+
+# User dictionary (contains user input history/frequency)
+mishi_wubi.userdb/
+.writing-stats/
+lua/logger.lua
