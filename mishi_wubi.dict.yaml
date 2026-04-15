@@ -18,6 +18,32 @@ encoder:
     - length_in_range: [4, 30]  # 对于四至三十字词
       formula: "AaBaCaZa"        # 取第一字首码，第二字尾码、第三字首码、最后一字尾码
 ...
+气	q
+五	w
+山	e
+八	r
+土	t
+言	y
+月	u
+日	i
+口	o
+车	p
+金	a
+石	s
+米	d
+王	f
+广	g
+火	h
+子	j
+十	k
+立	l
+之	z
+西	x
+川	c
+水	v
+巴	b
+女	n
+木	m
 的	nbwd
 一	ssy
 是	isns
@@ -783,7 +809,7 @@ encoder:
 营	kioy
 坚	dktj
 松	mrys
-皮	gewp
+皮	gekp
 供	rkrg
 店	geod
 饭	ulkf
@@ -1978,7 +2004,7 @@ encoder:
 饿	ulwe
 衷	wogz
 萍	kvkp
-涨	vgwz
+涨	vgzz
 葬	kskz
 币	reb
 吵	oprc
@@ -11778,7 +11804,6 @@ encoder:
 螄	cres
 螁	cezt
 将	kucj
-螀	kucj
 蝿	cily
 蝺	crwq
 蝹	civy
@@ -13385,7 +13410,6 @@ encoder:
 絨	llxr
 絧	lcot
 给	laog
-給	laog
 絥	lrwf
 絤	lxx
 絣	lkkb
@@ -27495,6 +27519,7 @@ encoder:
 嬥	njft
 嬭	nsxn
 孈	neoh
+螀	kucj
 屵	ege
 屸	edl
 岨	ehq
@@ -27713,6 +27738,7 @@ encoder:
 繻	ltdx
 纕	lwgr
 纖	lasx
+給	laog
 羛	dfdy
 羬	dvwq
 翍	jdkp
@@ -29836,7 +29862,7 @@ encoder:
 欬	wlaa
 欯	toak
 欱	asax
-欸	yqaê
+欸	yqae
 欹	pjaq
 欽	auay
 款	tdax
@@ -32769,7 +32795,7 @@ encoder:
 訑	yyt
 詀	yeot
 詑	yilx
-誒	yypê
+誒	yype
 説	ydnt
 謉	ynyg
 豰	tikg
@@ -36421,3 +36447,4 @@ encoder:
 䶯	nrx
 䶴	huk
 龰	nesr
+

@@ -23,10 +23,12 @@ local function commit(env, code, leftover)
   if not text then return end
 
   env.engine:commit_text(text)
-  env.engine.context:clear()
 
   if leftover and #leftover > 0 then
+    -- 直接替换 input，避免 clear() 导致闪烁
     env.engine.context.input = leftover
+  else
+    env.engine.context:clear()
   end
 end
 
@@ -64,8 +66,9 @@ local function auto_commit(key_event, env)
         flag = true
         ---这里要跳到下一次循环因为inp和n都要更新
       elseif not w3 and not w4 then
-        flag = true
-        context:clear()
+        return 2
+        -- context:clear()
+        ---输入错误当作英文输入吧，不作任何操作，直接退出
         ---直接全部清空太极端了,或许可以在没有选项时提供两个选项让用户选择清空
       end
     end
